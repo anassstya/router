@@ -1,0 +1,13 @@
+.headerMenu{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    border: 1px solid white;
+    padding: 10px 50px;
+}
+.menu__item{
+    cursor: pointer;
+}
+.menu__item-active{
+    border-bottom: 4px solid greenyellow;
+}
