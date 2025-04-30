@@ -18,6 +18,7 @@ export default function Menu() {
                     </li>
                 ))}
             </ul>
+            <Link to='/'>Назад</Link>
         </nav>
     );
 }

@@ -19,9 +19,4 @@ export const data = [
         name: 'Forza Karting',
         path: '/forza'
     },
-    {
-        id: 5,
-        name: 'Назад',
-        path: '/'
-    }
 ]
