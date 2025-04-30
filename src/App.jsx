@@ -2,31 +2,31 @@ import { useState } from 'react'
 import './App.css'
 import Menu from "./Menu/Menu.jsx";
 import Crud from "./CRUD/Crud.jsx";
+import {createBrowserRouter, Link, RouterProvider} from "react-router-dom";
 
-function App() {
-  const [currentPage, setPage] = useState(null);
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <App/>
+    },
+    {
+        path: '/menu',
+        element: <Menu/>
+    },
+    {
+        path: '/crud',
+        element: <Crud/>
 
-  const handleChange = (page) => {
-      setPage(page)
-  }
-    const handleBackChange = () => {
-        setPage(null)
     }
+])
 
+export default function App() {
   return (
-    <div>
-        <div className={'container'}>
-            <button onClick={() => handleChange('Menu')}>Меню</button>
-            <button onClick={() => handleChange('Crud')}>CRUD</button>
-            <button onClick={() => handleBackChange()}>Назад</button>
-        </div>
-
-        {currentPage === 'Menu' && <Menu/>}
-        {currentPage === 'Crud' && <Crud/>}
-    </div>
-
-
+      <div className={'container'}>
+          <Link to='/menu'>Menu</Link>
+          <Link to='/crud'>CRUD</Link>
+          <Link to='/'>Назад</Link>
+      </div>
   )
 }
 
-export default App

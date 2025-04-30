@@ -11,3 +11,6 @@
 .menu__item-active{
     border-bottom: 4px solid greenyellow;
 }
+ul{
+    list-style-type: none;
+}
